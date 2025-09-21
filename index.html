@@ -5,38 +5,209 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CHANGE – Research Center</title>
   <style>
-    body { font-family: Arial, sans-serif; margin:0; background:#f9f9f9; color:#333; }
-    header { text-align:center; padding:2rem 1rem; background:#00695c; color:#fff; }
-    header img { max-width:180px; display:block; margin:0 auto 1rem; }
-    main { max-width:900px; margin:auto; background:#fff; padding:2rem; }
-    h1, h2 { color:#00695c; }
-    ul { padding-left:1.1rem; }
+    :root{
+      --brand:#00695c;
+      --bg:#f7f8fa;
+      --text:#333;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --max:1100px;
+      --radius:16px;
+      --shadow:0 6px 18px rgba(0,0,0,0.06);
+    }
+    *{box-sizing:border-box}
+    body { font-family: Arial, sans-serif; margin:0; background:var(--bg); color:var(--text); line-height:1.6; }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    /* Top bar */
+    header { background:var(--brand); color:#fff; }
+    .top {
+      max-width:var(--max); margin:0 auto; padding:1rem 1rem; display:flex; align-items:center; gap:1rem;
+    }
+    header img { max-width:72px; height:auto; display:block; }
+    header h1 { font-size:1.1rem; margin:0; line-height:1.3; }
+    /* Nav */
+    nav {
+      position:sticky; top:0; z-index:20; background:#0e7d6f; color:#fff;
+      box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    }
+    .nav-inner{ max-width:var(--max); margin:0 auto; padding:0.5rem 1rem; display:flex; gap:1rem; flex-wrap:wrap; }
+    .nav-inner a{ color:#fff; opacity:0.95; font-weight:600; }
+    .nav-inner a:hover{ opacity:1 }
+    /* Hero */
+    .hero{
+      max-width:var(--max); margin:1.5rem auto 0; padding:1.25rem 1rem 0;
+    }
+    .hero-card{
+      background:linear-gradient(135deg,#e6f5f3,#ffffff); border-radius:var(--radius); padding:2rem; box-shadow:var(--shadow);
+    }
+    .hero h2{ margin:0 0 0.5rem; color:var(--brand); font-size:1.6rem; }
+    .hero p{ margin:0; color:#1f2937 }
+    /* Sections */
+    main{ max-width:var(--max); margin:1rem auto; padding:1rem; }
+    section{ background:var(--card); border-radius:var(--radius); padding:1.5rem; box-shadow:var(--shadow); margin-bottom:1rem; }
+    section h2{ color:var(--brand); margin-top:0 }
+    .muted{ color:var(--muted) }
+    /* Grids */
+    .grid{ display:grid; gap:1rem }
+    @media(min-width:720px){ .grid-3{ grid-template-columns:repeat(3,1fr) } .grid-2{ grid-template-columns:repeat(2,1fr) } }
+    .card{ background:#fff; border-radius:14px; padding:1rem; box-shadow:var(--shadow); }
+    .card h3{ margin-top:0; color:#0b7467 }
+    .pill{ display:inline-block; padding:0.25rem 0.6rem; border-radius:999px; background:#eef6f5; color:#0b7467; font-size:0.8rem; font-weight:700 }
+    /* Lists */
+    ul.clean{ padding-left:1.1rem; margin:0.5rem 0 0 }
+    li+li{ margin-top:0.4rem }
+    /* Partners strip */
+    .partners{ display:flex; gap:1rem; flex-wrap:wrap; align-items:center }
+    .partners img{ height:36px; filter:grayscale(100%); opacity:0.75 }
+    .partners img:hover{ opacity:1; filter:none }
+    /* Footer */
+    footer{ text-align:center; color:#6b7280; padding:2rem 1rem }
   </style>
 </head>
 <body>
   <header>
-    <!-- Upload your logo to images/logo.png (or change the path below) -->
-    <img src="images/logo.png" alt="CHANGE logo" />
-    <h1>Research Center for Global Health Action on Climate Change, Gender Equity, and Emerging Diseases (CHANGE)</h1>
+    <div class="top">
+      <!-- Keep your logo at images/logo.png -->
+      <img src="images/logo.png" alt="CHANGE logo" />
+      <h1>Research Center for Global Health Action on Climate Change, Gender Equity, and Emerging Diseases (CHANGE)</h1>
+    </div>
   </header>
 
+  <nav>
+    <div class="nav-inner">
+      <a href="#about">About</a>
+      <a href="#focus">Focus Areas</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#news">News & Impact</a>
+      <a href="#partners">Partners</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-card">
+      <h2>Turning science into action for healthier, climate-resilient communities.</h2>
+      <p class="muted">CHANGE works where health, environment, and equity intersect—helping communities anticipate risks, reduce harm, and build resilience in Benin and beyond.</p>
+    </div>
+  </div>
+
   <main>
-    <p><strong>The sustainable development of a nation depends on its ability to integrate scientific advances to address contemporary challenges.</strong>
-    In Benin, these challenges are numerous and interconnected: emerging and re-emerging infectious diseases, the spread of zoonotic diseases, the rapid rise of antimicrobial resistance, and increased exposure to environmental pollutants—including contaminants of emerging concern (CECs) such as microplastics, pharmaceutical residues, pesticides, and persistent chemicals. Exacerbated by climate change, these threats pose major risks to human health and ecosystems. Meeting these challenges requires adapted, inclusive, and evidence-based solutions, especially to protect the most vulnerable communities.</p>
+    <!-- About -->
+    <section id="about" aria-labelledby="about">
+      <h2>About CHANGE</h2>
+      <p><strong>CHANGE</strong> is a non-political, non-profit research center that transforms scientific knowledge into concrete, sustainable actions. We respond to climate-sensitive health risks—emerging infectious diseases, antimicrobial resistance, and environmental pollutants—through evidence-based, locally adapted solutions. Our work advances the United Nations Sustainable Development Goals, especially <strong>SDG 3 (Good Health & Well-being)</strong> and <strong>SDG 13 (Climate Action)</strong>.</p>
+    </section>
 
-    <p><strong>CHANGE</strong> is a non-political, non-profit organization committed to transforming scientific knowledge into concrete and sustainable actions.</p>
+    <!-- Focus Areas -->
+    <section id="focus" aria-labelledby="focus">
+      <h2>Focus Areas</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <span class="pill">AMR & Emerging Diseases</span>
+          <h3>Detect & Respond</h3>
+          <p>Advanced genomics and transmission-network insights to track pathogens and support targeted responses, including bacteriophages and credible antibiotic alternatives.</p>
+        </div>
+        <div class="card">
+          <span class="pill">Environmental Pollutants</span>
+          <h3>Reduce Exposure</h3>
+          <p>Monitor and mitigate CECs—microplastics, pharmaceutical residues, pesticides, persistent chemicals—to protect health and ecosystems.</p>
+        </div>
+        <div class="card">
+          <span class="pill">Capacity & Early Warning</span>
+          <h3>Build Systems</h3>
+          <p>Training, early-warning systems, and preventive strategies co-designed with local actors for rapid, context-appropriate action.</p>
+        </div>
+        <div class="card">
+          <span class="pill">Gender & Inclusion</span>
+          <h3>Center Equity</h3>
+          <p>Embed gender equity and social inclusion, ensuring active participation of women, children, and marginalized groups across all activities.</p>
+        </div>
+        <div class="card">
+          <span class="pill">Climate Resilience</span>
+          <h3>Adapt & Thrive</h3>
+          <p>Support communities to assess risks and adopt sustainable solutions to climate impacts, strengthening resilience over time.</p>
+        </div>
+        <div class="card">
+          <span class="pill">From Science to Practice</span>
+          <h3>Translate & Share</h3>
+          <p>Turn research into practical tools for communities, decision-makers, and partners; communicate science clearly for real-world impact.</p>
+        </div>
+      </div>
+    </section>
 
-    <h2>Our Strategic Focus Areas</h2>
-    <ul>
-      <li><strong>Combat emerging infectious diseases and antimicrobial resistance:</strong> Identify, monitor, and fight these major health threats using advanced genomic tools to trace pathogen evolution and better understand transmission networks. CHANGE also promotes innovative solutions, such as bacteriophage use and other credible alternatives to antibiotics, to address antimicrobial resistance and preserve treatment effectiveness.</li>
-      <li><strong>Reduce the impacts of environmental pollutants:</strong> Monitor and mitigate the effects of environmental pollutants, including contaminants of emerging concern (CECs), to protect public health and preserve ecosystems.</li>
-      <li><strong>Strengthen local capacity through tailored scientific actions:</strong> Develop early warning systems, train local actors, and promote preventive strategies to anticipate and manage health and environmental crises.</li>
-      <li><strong>Ensure gender equity and social inclusion:</strong> Integrate these principles into all activities, with emphasis on the active participation of women, children, and marginalized groups.</li>
-      <li><strong>Promote climate adaptation and resilience:</strong> Support vulnerable communities in risk assessment and the implementation of sustainable solutions to address climate change impacts.</li>
-      <li><strong>Value and disseminate scientific discoveries:</strong> Transform research findings into practical, accessible tools for communities, decision-makers, and partners. By making scientific innovations understandable and actionable, CHANGE maximizes their impact on sustainable development and community resilience.</li>
-    </ul>
+    <!-- Projects -->
+    <section id="projects" aria-labelledby="projects">
+      <h2>Projects</h2>
+      <p class="muted">These can link to separate GitHub repositories with their own Pages (e.g., <code>change-benin.github.io/water-health</code>).</p>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Water & Health Early Warning</h3>
+          <p>Community monitoring of water quality and microbial risk, coupled with alert dashboards and training.</p>
+          <p><a href="#" aria-disabled="true">Coming soon</a></p>
+        </div>
+        <div class="card">
+          <h3>AMR Surveillance & Phage Options</h3>
+          <p>Genomics-enabled AMR tracking and evaluation of credible alternatives aligned with stewardship goals.</p>
+          <p><a href="#" aria-disabled="true">Coming soon</a></p>
+        </div>
+        <div class="card">
+          <h3>Gender-Responsive Climate Adaptation</h3>
+          <p>Inclusive design of adaptation measures ensuring equitable participation and benefits.</p>
+          <p><a href="#" aria-disabled="true">Coming soon</a></p>
+        </div>
+      </div>
+    </section>
 
-    <p>In line with the UN Sustainable Development Goals—especially SDG 3 (Good Health and Well-being) and SDG 13 (Climate Action)—CHANGE is committed to catalyzing positive and inclusive transformations to strengthen population resilience and ensure a better future.</p>
+    <!-- Publications -->
+    <section id="publications" aria-labelledby="publications">
+      <h2>Publications</h2>
+      <p class="muted">A selection of recent research outputs. <a href="publications/index.html">See all publications →</a></p>
+      <ul class="clean">
+        <li><strong>[2025]</strong> Title of key paper or report <a href="#" target="_blank" rel="noopener">PDF</a></li>
+        <li><strong>[2024]</strong> Another flagship publication <a href="#" target="_blank" rel="noopener">PDF</a></li>
+        <li><strong>[2024]</strong> Policy brief title <a href="#" target="_blank" rel="noopener">PDF</a></li>
+      </ul>
+    </section>
+
+    <!-- News / Impact -->
+    <section id="news" aria-labelledby="news">
+      <h2>News & Impact</h2>
+      <ul class="clean">
+        <li><strong>[Update]</strong> CHANGE launches its public website and project portfolio. <span class="muted">Add a short 1–2 sentence update here.</span></li>
+        <li><strong>[Report]</strong> Baseline assessment of CECs and microbial risk in pilot communities. <span class="muted">Link to PDF or repo when available.</span></li>
+        <li><strong>[Training]</strong> Capacity-building workshop on early-warning systems and field genomics. <span class="muted">Dates & brief outcome.</span></li>
+      </ul>
+    </section>
+
+    <!-- Partners -->
+    <section id="partners" aria-labelledby="partners">
+      <h2>Partners</h2>
+      <p class="muted">Logos are placeholders—upload your partner logos into <code>images/partners/</code> and update the file names.</p>
+      <div class="partners">
+        <img src="images/partners/partner1.png" alt="Partner 1" />
+        <img src="images/partners/partner2.png" alt="Partner 2" />
+        <img src="images/partners/partner3.png" alt="Partner 3" />
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact">
+      <h2>Contact</h2>
+      <p>For partnerships and inquiries: <a href="mailto:change.ngo.v1@gmail.com">change.ngo.v1@gmail.com</a></p>
+      <p class="muted">We intentionally do not publish personal addresses or phone numbers. Use the email above for initial contact.</p>
+    </section>
   </main>
+
+  <footer>
+    © <span id="yr"></span> CHANGE — Research Center for Global Health Action on Climate Change, Gender Equity, and Emerging Diseases
+  </footer>
+
+  <script>
+    // set current year in footer
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
