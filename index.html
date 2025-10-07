@@ -21,26 +21,17 @@
     a:hover { text-decoration: underline; }
     /* Top bar */
     header { background:var(--brand); color:#fff; }
-    .top {
-      max-width:var(--max); margin:0 auto; padding:1rem 1rem; display:flex; align-items:center; gap:1rem;
-    }
+    .top { max-width:var(--max); margin:0 auto; padding:1rem 1rem; display:flex; align-items:center; gap:1rem; }
     header img { max-width:72px; height:auto; display:block; }
     header h1 { font-size:1.1rem; margin:0; line-height:1.3; }
     /* Nav */
-    nav {
-      position:sticky; top:0; z-index:20; background:#0e7d6f; color:#fff;
-      box-shadow:0 2px 8px rgba(0,0,0,0.08);
-    }
+    nav { position:sticky; top:0; z-index:20; background:#0e7d6f; color:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
     .nav-inner{ max-width:var(--max); margin:0 auto; padding:0.5rem 1rem; display:flex; gap:1rem; flex-wrap:wrap; }
     .nav-inner a{ color:#fff; opacity:0.95; font-weight:600; }
     .nav-inner a:hover{ opacity:1 }
     /* Hero */
-    .hero{
-      max-width:var(--max); margin:1.5rem auto 0; padding:1.25rem 1rem 0;
-    }
-    .hero-card{
-      background:linear-gradient(135deg,#e6f5f3,#ffffff); border-radius:var(--radius); padding:2rem; box-shadow:var(--shadow);
-    }
+    .hero{ max-width:var(--max); margin:1.5rem auto 0; padding:1.25rem 1rem 0; }
+    .hero-card{ background:linear-gradient(135deg,#e6f5f3,#ffffff); border-radius:var(--radius); padding:2rem; box-shadow:var(--shadow); }
     .hero h2{ margin:0 0 0.5rem; color:var(--brand); font-size:1.6rem; }
     .hero p{ margin:0; color:#1f2937 }
     /* Sections */
@@ -61,6 +52,11 @@
     .partners{ display:flex; gap:1rem; flex-wrap:wrap; align-items:center }
     .partners img{ height:36px; filter:grayscale(100%); opacity:0.75 }
     .partners img:hover{ opacity:1; filter:none }
+    /* CEO section additions */
+    .ceo { display:grid; gap:1rem; align-items:start }
+    @media(min-width:720px){ .ceo{ grid-template-columns: 220px 1fr } }
+    .ceo img{ width:100%; height:auto; border-radius:14px; box-shadow:var(--shadow); }
+    .quote{ font-style:italic; background:#f1f6f5; border-left:4px solid var(--brand); padding:0.75rem 1rem; border-radius:8px; }
     /* Footer */
     footer{ text-align:center; color:#6b7280; padding:2rem 1rem }
   </style>
@@ -77,6 +73,12 @@
   <nav>
     <div class="nav-inner">
       <a href="#about">About</a>
+      <!-- NEW: quick links -->
+      <a href="#vision">Vision</a>
+      <a href="#mission">Mission</a>
+      <a href="#objectives">Objectives</a>
+      <a href="#ceo">From the CEO</a>
+      <!-- existing -->
       <a href="#focus">Focus Areas</a>
       <a href="#projects">Projects</a>
       <a href="#publications">Publications</a>
@@ -90,7 +92,7 @@
   <div class="hero">
     <div class="hero-card">
       <h2>Turning science into action for healthier, climate-resilient communities.</h2>
-      <p class="muted">CHANGE works where health, environment, and equity intersect-helping communities anticipate risks, reduce harm, and build resilience in Benin and beyond.</p>
+      <p class="muted">CHANGE works where health, environment, and equity intersect—helping communities anticipate risks, reduce harm, and build resilience in Benin and beyond.</p>
     </div>
   </div>
 
@@ -98,7 +100,50 @@
     <!-- About -->
     <section id="about" aria-labelledby="about">
       <h2>About CHANGE</h2>
-      <p><strong>CHANGE</strong> is a non-political, non-profit research center that transforms scientific knowledge into concrete, sustainable actions. We respond to climate-sensitive health risks-emerging infectious diseases, antimicrobial resistance, and environmental pollutants-through evidence-based, locally adapted solutions. Our work advances the United Nations Sustainable Development Goals, especially <strong>SDG 3 (Good Health & Well-being)</strong>, <strong>SDG 6 (Clean Water and Sanitation)</strong> and <strong>SDG 13 (Climate Action)</strong>.</p>
+      <p><strong>CHANGE</strong> is a non-political, non-profit research center that transforms scientific knowledge into concrete, sustainable actions. We respond to climate-sensitive health risks—emerging infectious diseases, antimicrobial resistance, and environmental pollutants—through evidence-based, locally adapted solutions. Our work advances the United Nations Sustainable Development Goals, especially <strong>SDG 3 (Good Health & Well-being)</strong>, <strong>SDG 6 (Clean Water and Sanitation)</strong> and <strong>SDG 13 (Climate Action)</strong>.</p>
+    </section>
+
+    <!-- NEW: Vision -->
+    <section id="vision" aria-labelledby="vision">
+      <h2>Our Vision</h2>
+      <p>A world where every community—especially those most vulnerable to climate shocks—can anticipate health risks early and act decisively to protect lives, dignity, and ecosystems.</p>
+    </section>
+
+    <!-- NEW: Mission -->
+    <section id="mission" aria-labelledby="mission">
+      <h2>Our Mission</h2>
+      <p>To co-create practical, science-based solutions that reduce climate-sensitive health risks. We blend advanced genomics, environmental monitoring, and social inclusion to build equitable early-warning and response systems.</p>
+    </section>
+
+    <!-- NEW: Objectives -->
+    <section id="objectives" aria-labelledby="objectives">
+      <h2>Strategic Objectives</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>1) Anticipate</h3>
+          <p>Develop no/low-tech early warning tools with communities to detect climate–health signals in real time.</p>
+        </div>
+        <div class="card">
+          <h3>2) Reduce Risk</h3>
+          <p>Map transmission pathways, pollutants, and AMR drivers to inform prevention, stewardship, and targeted interventions.</p>
+        </div>
+        <div class="card">
+          <h3>3) Build Capacity</h3>
+          <p>Train local actors and strengthen institutions for sustained monitoring, rapid response, and data stewardship.</p>
+        </div>
+        <div class="card">
+          <h3>4) Innovate</h3>
+          <p>Translate research into scalable tools—dashboards, protocols, and policy briefs—for decision-makers and practitioners.</p>
+        </div>
+        <div class="card">
+          <h3>5) Center Equity</h3>
+          <p>Embed gender and inclusion so women, children, and marginalized groups shape priorities and benefit from outcomes.</p>
+        </div>
+        <div class="card">
+          <h3>6) Share & Inspire</h3>
+          <p>Communicate evidence clearly to mobilize action across government, academia, civil society, and communities.</p>
+        </div>
+      </div>
     </section>
 
     <!-- Focus Areas -->
@@ -113,7 +158,7 @@
         <div class="card">
           <span class="pill">Environmental Pollutants</span>
           <h3>Reduce Exposure</h3>
-          <p>Monitor and mitigate CECs-microplastics, pharmaceutical residues, pesticides, persistent chemicals-to protect health and ecosystems.</p>
+          <p>Monitor and mitigate CECs—microplastics, pharmaceutical residues, pesticides, persistent chemicals—to protect health and ecosystems.</p>
         </div>
         <div class="card">
           <span class="pill">Capacity & Early Warning</span>
@@ -122,7 +167,7 @@
         </div>
         <div class="card">
           <span class="pill">Gender & Inclusion</span>
-          <h3>Genter Equity</h3>
+          <h3>Gender Equity</h3>
           <p>Embed gender equity and social inclusion, ensuring active participation of women, children, and marginalized groups across all activities.</p>
         </div>
         <div class="card">
@@ -134,6 +179,20 @@
           <span class="pill">From Science to Practice</span>
           <h3>Translate & Share</h3>
           <p>Turn research into practical tools for communities, decision-makers, and partners; communicate science clearly for real-world impact.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: CEO Message -->
+    <section id="ceo" aria-labelledby="ceo">
+      <h2>From the CEO</h2>
+      <div class="ceo">
+        <img src="images/team/ceo.jpg" alt="Photo of CHANGE CEO" />
+        <div>
+          <p class="quote">“Science only matters when it changes lives. At CHANGE, we listen first, co-create with communities, and turn evidence into action that people can feel.”</p>
+          <p><strong>Dr. [Full Name]</strong><br/>
+          Chief Executive Officer, CHANGE</p>
+          <p class="muted">For media or partnership inquiries, please write to <a href="mailto:change.ngo.v1@gmail.com">change.ngo.v1@gmail.com</a>.</p>
         </div>
       </div>
     </section>
