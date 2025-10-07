@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CHANGE – Research Center</title>
+  <meta name="description" content="CHANGE: Research Center for Global Health Action on Climate Change & Adaptation, Infectious Diseases, AMR, CECs, Early Warning, Pandemic Preparedness, Gender Equity, and Science Valorization." />
   <style>
     :root{
       --brand:#00695c;
@@ -45,14 +46,11 @@
     .card{ background:#fff; border-radius:14px; padding:1rem; box-shadow:var(--shadow); }
     .card h3{ margin-top:0; color:#0b7467 }
     .pill{ display:inline-block; padding:0.25rem 0.6rem; border-radius:999px; background:#eef6f5; color:#0b7467; font-size:0.8rem; font-weight:700 }
-    /* Lists */
-    ul.clean{ padding-left:1.1rem; margin:0.5rem 0 0 }
-    li+li{ margin-top:0.4rem }
     /* Partners strip */
     .partners{ display:flex; gap:1rem; flex-wrap:wrap; align-items:center }
     .partners img{ height:36px; filter:grayscale(100%); opacity:0.75 }
     .partners img:hover{ opacity:1; filter:none }
-    /* CEO section additions */
+    /* CEO section */
     .ceo { display:grid; gap:1rem; align-items:start }
     @media(min-width:720px){ .ceo{ grid-template-columns: 220px 1fr } }
     .ceo img{ width:100%; height:auto; border-radius:14px; box-shadow:var(--shadow); }
@@ -64,21 +62,18 @@
 <body>
   <header>
     <div class="top">
-      <!-- Keep your logo at images/logo.png -->
       <img src="images/logo.png" alt="CHANGE logo" />
       <h1>Research Center for Global Health Action on Climate Change, Gender Equity, and Emerging Diseases (CHANGE)</h1>
     </div>
   </header>
 
   <nav>
-    <div class="nav-inner">
+    <div class="nav-inner" role="navigation" aria-label="Primary">
       <a href="#about">About</a>
-      <!-- NEW: quick links -->
       <a href="#vision">Vision</a>
       <a href="#mission">Mission</a>
       <a href="#objectives">Objectives</a>
       <a href="#ceo">From the CEO</a>
-      <!-- existing -->
       <a href="#focus">Focus Areas</a>
       <a href="#projects">Projects</a>
       <a href="#publications">Publications</a>
@@ -92,7 +87,7 @@
   <div class="hero">
     <div class="hero-card">
       <h2>Turning science into action for healthier, climate-resilient communities.</h2>
-      <p class="muted">CHANGE works where health, environment, and equity intersect—helping communities anticipate risks, reduce harm, and build resilience in Benin and beyond.</p>
+      <p class="muted">We work at the nexus of climate change, infectious diseases, and equity—co-creating early warning and preparedness with communities in Benin and beyond.</p>
     </div>
   </div>
 
@@ -100,48 +95,56 @@
     <!-- About -->
     <section id="about" aria-labelledby="about">
       <h2>About CHANGE</h2>
-      <p><strong>CHANGE</strong> is a non-political, non-profit research center that transforms scientific knowledge into concrete, sustainable actions. We respond to climate-sensitive health risks—emerging infectious diseases, antimicrobial resistance, and environmental pollutants—through evidence-based, locally adapted solutions. Our work advances the United Nations Sustainable Development Goals, especially <strong>SDG 3 (Good Health & Well-being)</strong>, <strong>SDG 6 (Clean Water and Sanitation)</strong> and <strong>SDG 13 (Climate Action)</strong>.</p>
+      <p><strong>CHANGE</strong> is a non-political, non-profit research center advancing climate health by addressing infectious diseases, antimicrobial resistance (AMR), and contaminants of emerging concern (CECs). We combine field science, genomics, and inclusive design to convert evidence into practical tools for adaptation and preparedness. Our work supports the SDGs—especially <strong>SDG 3</strong>, <strong>SDG 6</strong>, and <strong>SDG 13</strong>.</p>
     </section>
 
-    <!-- NEW: Vision -->
+    <!-- Vision -->
     <section id="vision" aria-labelledby="vision">
       <h2>Our Vision</h2>
-      <p>A world where every community—especially those most vulnerable to climate shocks—can anticipate health risks early and act decisively to protect lives, dignity, and ecosystems.</p>
+      <p>Communities most exposed to climate shocks can anticipate health threats early, adapt with dignity, and thrive—benefiting from reliable water, fewer infections, and equitable access to care.</p>
     </section>
 
-    <!-- NEW: Mission -->
+    <!-- Mission -->
     <section id="mission" aria-labelledby="mission">
       <h2>Our Mission</h2>
-      <p>To co-create practical, science-based solutions that reduce climate-sensitive health risks. We blend advanced genomics, environmental monitoring, and social inclusion to build equitable early-warning and response systems.</p>
+      <p>To co-create science-based solutions that cut risk from climate-sensitive infections and pollutants. We fuse environmental monitoring, pathogen genomics, and social inclusion to build equitable early-warning, stewardship, and pandemic-preparedness systems.</p>
     </section>
 
-    <!-- NEW: Objectives -->
+    <!-- Objectives -->
     <section id="objectives" aria-labelledby="objectives">
       <h2>Strategic Objectives</h2>
       <div class="grid grid-3">
         <div class="card">
-          <h3>1) Anticipate</h3>
-          <p>Develop no/low-tech early warning tools with communities to detect climate–health signals in real time.</p>
+          <h3>1) Climate Health & Adaptation</h3>
+          <p>Link climate hazards to infectious-disease risks and guide locally owned adaptation that protects the most exposed.</p>
         </div>
         <div class="card">
-          <h3>2) Reduce Risk</h3>
-          <p>Map transmission pathways, pollutants, and AMR drivers to inform prevention, stewardship, and targeted interventions.</p>
+          <h3>2) AMR Stewardship</h3>
+          <p>Track resistance, map transmission, and evaluate credible alternatives (e.g., phages) to preserve antibiotic effectiveness.</p>
         </div>
         <div class="card">
-          <h3>3) Build Capacity</h3>
-          <p>Train local actors and strengthen institutions for sustained monitoring, rapid response, and data stewardship.</p>
+          <h3>3) CECs & Clean Environments</h3>
+          <p>Monitor microplastics and chemical residues; co-design practical exposure-reduction and water safety measures.</p>
         </div>
         <div class="card">
-          <h3>4) Innovate</h3>
-          <p>Translate research into scalable tools—dashboards, protocols, and policy briefs—for decision-makers and practitioners.</p>
+          <h3>4) Early Warning & Dashboards</h3>
+          <p>Develop no/low-tech indicators with communities and pair them with digital dashboards for timely, local action.</p>
         </div>
         <div class="card">
-          <h3>5) Center Equity</h3>
-          <p>Embed gender and inclusion so women, children, and marginalized groups shape priorities and benefit from outcomes.</p>
+          <h3>5) Pandemic Preparedness</h3>
+          <p>Strengthen detection, data pipelines, and response playbooks that scale from neighborhoods to national systems.</p>
         </div>
         <div class="card">
-          <h3>6) Share & Inspire</h3>
-          <p>Communicate evidence clearly to mobilize action across government, academia, civil society, and communities.</p>
+          <h3>6) Gender Equity & Inclusion</h3>
+          <p>Ensure women, youth, and marginalized groups shape priorities and share equally in benefits and opportunities.</p>
+        </div>
+        <div class="card">
+          <h3>7) Science Valorization</h3>
+          <p>Translate research into policy briefs, protocols, open tools, and investable solutions that deliver real-world impact.</p>
+        </div>
+        <div class="card">
+          <h3>8) Capacity & Partnerships</h3>
+          <p>Train local actors and sustain north–south–south collaborations for ethical, long-term stewardship of data and systems.</p>
         </div>
       </div>
     </section>
@@ -151,48 +154,48 @@
       <h2>Focus Areas</h2>
       <div class="grid grid-3">
         <div class="card">
-          <span class="pill">AMR & Emerging Diseases</span>
-          <h3>Detect & Respond</h3>
-          <p>Advanced genomics and transmission-network insights to track pathogens and support targeted responses, including bacteriophages and credible antibiotic alternatives.</p>
+          <span class="pill">Climate Health</span>
+          <h3>Climate Change & Adaptation</h3>
+          <p>Quantify climate–infection links and co-design adaptation for safer water, food, and living environments.</p>
         </div>
         <div class="card">
-          <span class="pill">Environmental Pollutants</span>
-          <h3>Reduce Exposure</h3>
-          <p>Monitor and mitigate CECs—microplastics, pharmaceutical residues, pesticides, persistent chemicals—to protect health and ecosystems.</p>
+          <span class="pill">AMR</span>
+          <h3>Antimicrobial Resistance</h3>
+          <p>Genomics-enabled surveillance, transmission mapping, and alternatives (e.g., bacteriophages) aligned with stewardship.</p>
         </div>
         <div class="card">
-          <span class="pill">Capacity & Early Warning</span>
-          <h3>Build Systems</h3>
-          <p>Training, early-warning systems, and preventive strategies co-designed with local actors for rapid, context-appropriate action.</p>
+          <span class="pill">CECs</span>
+          <h3>Contaminants of Emerging Concern</h3>
+          <p>Microplastics and chemical residues: monitoring, risk communication, and exposure-reduction strategies.</p>
         </div>
         <div class="card">
-          <span class="pill">Gender & Inclusion</span>
-          <h3>Gender Equity</h3>
-          <p>Embed gender equity and social inclusion, ensuring active participation of women, children, and marginalized groups across all activities.</p>
+          <span class="pill">Early Warning</span>
+          <h3>Community Indicators & Dashboards</h3>
+          <p>No/low-tech signals coupled with digital tools for rapid, locally led decisions.</p>
         </div>
         <div class="card">
-          <span class="pill">Climate Resilience</span>
-          <h3>Adapt & Thrive</h3>
-          <p>Support communities to assess risks and adopt sustainable solutions to climate impacts, strengthening resilience over time.</p>
+          <span class="pill">Preparedness</span>
+          <h3>Pandemic Readiness</h3>
+          <p>Field-ready workflows, data standards, and response playbooks from community to policy level.</p>
         </div>
         <div class="card">
-          <span class="pill">From Science to Practice</span>
-          <h3>Translate & Share</h3>
-          <p>Turn research into practical tools for communities, decision-makers, and partners; communicate science clearly for real-world impact.</p>
+          <span class="pill">Equity & Impact</span>
+          <h3>Gender Equity & Valorization</h3>
+          <p>Inclusive design plus clear pathways from science to policy, practice, and products.</p>
         </div>
       </div>
     </section>
 
-    <!-- NEW: CEO Message -->
+    <!-- CEO Message -->
     <section id="ceo" aria-labelledby="ceo">
       <h2>From the CEO</h2>
       <div class="ceo">
-        <img src="images/team/ceo.jpg" alt="Photo of CHANGE CEO" />
+        <img src="images/ceo.jpg" alt="Photo of CHANGE CEO" />
         <div>
-          <p class="quote">“Science only matters when it changes lives. At CHANGE, we listen first, co-create with communities, and turn evidence into action that people can feel.”</p>
-          <p><strong>Dr. [Full Name]</strong><br/>
-          Chief Executive Officer, CHANGE</p>
-          <p class="muted">For media or partnership inquiries, please write to <a href="mailto:change.ngo.v1@gmail.com">change.ngo.v1@gmail.com</a>.</p>
+          <p class="quote">“Climate change is already shaping who gets sick, where, and when. Our job is to listen first, measure wisely, and act with communities—so evidence becomes safer water, fewer infections, and fairer health.”</p>
+          <p><strong>Dr. Yaovi Mahuton Gildas Hounmanou</strong><br/>
+          Founder &amp; CEO, CHANGE</p>
+          <p class="muted">Partnerships & media: <a href="mailto:change.ngo.v1@gmail.com">change.ngo.v1@gmail.com</a></p>
         </div>
       </div>
     </section>
@@ -204,17 +207,17 @@
       <div class="grid grid-3">
         <div class="card">
           <h3>Water & Health Early Warning</h3>
-          <p>Community monitoring of water quality and microbial risk, coupled with alert dashboards and training.</p>
+          <p>Community indicators for microbial risk plus alert dashboards and training.</p>
           <p><a href="#" aria-disabled="true">Coming soon</a></p>
         </div>
         <div class="card">
           <h3>AMR Surveillance & Phage Options</h3>
-          <p>Genomics-enabled AMR tracking and evaluation of credible alternatives aligned with stewardship goals.</p>
+          <p>Resistance tracking, transmission networks, and credible antibiotic alternatives.</p>
           <p><a href="#" aria-disabled="true">Coming soon</a></p>
         </div>
         <div class="card">
-          <h3>Gender-Responsive Climate Adaptation</h3>
-          <p>Inclusive design of adaptation measures ensuring equitable participation and benefits.</p>
+          <h3>Gender-Responsive Preparedness</h3>
+          <p>Designing readiness plans and communication that work for everyone, not just the average.</p>
           <p><a href="#" aria-disabled="true">Coming soon</a></p>
         </div>
       </div>
@@ -233,18 +236,18 @@
 
     <!-- News / Impact -->
     <section id="news" aria-labelledby="news">
-      <h2>News & Impact</h2>
+      <h2>News &amp; Impact</h2>
       <ul class="clean">
-        <li><strong>[Update]</strong> CHANGE launches its public website and project portfolio. <span class="muted">Add a short 1–2 sentence update here.</span></li>
-        <li><strong>[Report]</strong> Baseline assessment of CECs and microbial risk in pilot communities. <span class="muted">Link to PDF or repo when available.</span></li>
-        <li><strong>[Training]</strong> Capacity-building workshop on early-warning systems and field genomics. <span class="muted">Dates & brief outcome.</span></li>
+        <li><strong>[Update]</strong> CHANGE launches its public website and project portfolio. <span class="muted">Short 1–2 sentence update here.</span></li>
+        <li><strong>[Report]</strong> Baseline of CECs and microbial risk in pilot communities. <span class="muted">Link to PDF or repo when available.</span></li>
+        <li><strong>[Training]</strong> Workshop on early-warning systems and field genomics. <span class="muted">Dates & brief outcome.</span></li>
       </ul>
     </section>
 
     <!-- Partners -->
     <section id="partners" aria-labelledby="partners">
       <h2>Partners</h2>
-      <p class="muted">Logos placeholders of partners.</p>
+      <p class="muted">Logo placeholders of partners.</p>
       <div class="partners">
         <img src="images/partners/partner1.png" alt="Partner 1" />
         <img src="images/partners/partner2.png" alt="Partner 2" />
@@ -255,8 +258,8 @@
     <!-- Contact -->
     <section id="contact" aria-labelledby="contact">
       <h2>Contact</h2>
-      <p>For partnerships and inquiries: <a href="mailto:change.ngo.v1@gmail.com">change.ngo.v1@gmail.com</a></p>
-      <p class="muted">We intentionally do not publish personal addresses or phone numbers. Use the email above for initial contact.</p>
+      <p>Partnerships & inquiries: <a href="mailto:change.ngo.v1@gmail.com">change.ngo.v1@gmail.com</a></p>
+      <p class="muted">We do not publish personal addresses or phone numbers. Use the email above for initial contact.</p>
     </section>
   </main>
 
