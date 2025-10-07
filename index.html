@@ -20,42 +20,34 @@
     body { font-family: Arial, sans-serif; margin:0; background:var(--bg); color:var(--text); line-height:1.6; }
     a { color: var(--brand); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    /* Top bar */
     header { background:var(--brand); color:#fff; }
     .top { max-width:var(--max); margin:0 auto; padding:1rem 1rem; display:flex; align-items:center; gap:1rem; }
     header img { max-width:72px; height:auto; display:block; }
     header h1 { font-size:1.1rem; margin:0; line-height:1.3; }
-    /* Nav */
     nav { position:sticky; top:0; z-index:20; background:#0e7d6f; color:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
     .nav-inner{ max-width:var(--max); margin:0 auto; padding:0.5rem 1rem; display:flex; gap:1rem; flex-wrap:wrap; }
     .nav-inner a{ color:#fff; opacity:0.95; font-weight:600; }
     .nav-inner a:hover{ opacity:1 }
-    /* Hero */
     .hero{ max-width:var(--max); margin:1.5rem auto 0; padding:1.25rem 1rem 0; }
     .hero-card{ background:linear-gradient(135deg,#e6f5f3,#ffffff); border-radius:var(--radius); padding:2rem; box-shadow:var(--shadow); }
     .hero h2{ margin:0 0 0.5rem; color:var(--brand); font-size:1.6rem; }
     .hero p{ margin:0; color:#1f2937 }
-    /* Sections */
     main{ max-width:var(--max); margin:1rem auto; padding:1rem; }
     section{ background:var(--card); border-radius:var(--radius); padding:1.5rem; box-shadow:var(--shadow); margin-bottom:1rem; }
     section h2{ color:var(--brand); margin-top:0 }
     .muted{ color:var(--muted) }
-    /* Grids */
     .grid{ display:grid; gap:1rem }
     @media(min-width:720px){ .grid-3{ grid-template-columns:repeat(3,1fr) } .grid-2{ grid-template-columns:repeat(2,1fr) } }
     .card{ background:#fff; border-radius:14px; padding:1rem; box-shadow:var(--shadow); }
     .card h3{ margin-top:0; color:#0b7467 }
     .pill{ display:inline-block; padding:0.25rem 0.6rem; border-radius:999px; background:#eef6f5; color:#0b7467; font-size:0.8rem; font-weight:700 }
-    /* Partners strip */
     .partners{ display:flex; gap:1rem; flex-wrap:wrap; align-items:center }
     .partners img{ height:36px; filter:grayscale(100%); opacity:0.75 }
     .partners img:hover{ opacity:1; filter:none }
-    /* CEO section */
     .ceo { display:grid; gap:1rem; align-items:start }
     @media(min-width:720px){ .ceo{ grid-template-columns: 220px 1fr } }
     .ceo img{ width:100%; height:auto; border-radius:14px; box-shadow:var(--shadow); }
     .quote{ font-style:italic; background:#f1f6f5; border-left:4px solid var(--brand); padding:0.75rem 1rem; border-radius:8px; }
-    /* Footer */
     footer{ text-align:center; color:#6b7280; padding:2rem 1rem }
   </style>
 </head>
@@ -68,12 +60,12 @@
   </header>
 
   <nav>
-    <div class="nav-inner" role="navigation" aria-label="Primary">
+    <div class="nav-inner">
       <a href="#about">About</a>
       <a href="#vision">Vision</a>
       <a href="#mission">Mission</a>
-      <a href="#objectives">Objectives</a>
       <a href="#ceo">From the CEO</a>
+      <a href="#objectives">Objectives</a>
       <a href="#focus">Focus Areas</a>
       <a href="#projects">Projects</a>
       <a href="#publications">Publications</a>
@@ -87,35 +79,48 @@
   <div class="hero">
     <div class="hero-card">
       <h2>Turning science into action for healthier, climate-resilient communities.</h2>
-      <p class="muted">We work at the nexus of climate change, infectious diseases, and equity—co-creating early warning and preparedness with communities in Benin and beyond.</p>
+      <p class="muted">We work at the nexus of climate change, infectious diseases, and equity-co-creating early warning and preparedness with communities in Benin and beyond.</p>
     </div>
   </div>
 
   <main>
     <!-- About -->
-    <section id="about" aria-labelledby="about">
+    <section id="about">
       <h2>About CHANGE</h2>
-      <p><strong>CHANGE</strong> is a non-political, non-profit research center advancing climate health by addressing infectious diseases, antimicrobial resistance (AMR), and contaminants of emerging concern (CECs). We combine field science, genomics, and inclusive design to convert evidence into practical tools for adaptation and preparedness. Our work supports the SDGs—especially <strong>SDG 3</strong>, <strong>SDG 6</strong>, and <strong>SDG 13</strong>.</p>
+      <p><strong>CHANGE</strong> is a non-political, non-profit research center advancing climate health by addressing infectious diseases, antimicrobial resistance (AMR), and contaminants of emerging concern (CECs). We combine field science, genomics, and inclusive design to convert evidence into practical tools for adaptation and preparedness. Our work contributes directly to <strong>SDG 3 (Good Health & Well-Being)</strong>, <strong>SDG 6 (Clean Water & Sanitation)</strong>, and <strong>SDG 13 (Climate Action)</strong>.</p>
     </section>
 
     <!-- Vision -->
-    <section id="vision" aria-labelledby="vision">
+    <section id="vision">
       <h2>Our Vision</h2>
-      <p>Communities most exposed to climate shocks can anticipate health threats early, adapt with dignity, and thrive—benefiting from reliable water, fewer infections, and equitable access to care.</p>
+      <p>Communities most exposed to climate shocks can anticipate health threats early, adapt with dignity, and thrive-benefiting from reliable water, fewer infections, and equitable access to care.</p>
     </section>
 
     <!-- Mission -->
-    <section id="mission" aria-labelledby="mission">
+    <section id="mission">
       <h2>Our Mission</h2>
       <p>To co-create science-based solutions that cut risk from climate-sensitive infections and pollutants. We fuse environmental monitoring, pathogen genomics, and social inclusion to build equitable early-warning, stewardship, and pandemic-preparedness systems.</p>
     </section>
 
+    <!-- CEO Message -->
+    <section id="ceo">
+      <h2>From the CEO</h2>
+      <div class="ceo">
+        <img src="images/ceo.png" alt="Photo of Dr Gildas Hounmanou" />
+        <div>
+          <p class="quote">“Climate change is already shaping who gets sick, where, and when. Our job is to listen first, measure wisely, and act with communities-so evidence becomes safer water, fewer infections, and fairer health.”</p>
+          <p><strong>Dr. Gildas Hounmanou</strong><br/>Founder &amp; CEO, CHANGE</p>
+          <p class="muted">Partnerships &amp; media: <a href="mailto:change.ngo.v1@gmail.com">change.ngo.v1@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+
     <!-- Objectives -->
-    <section id="objectives" aria-labelledby="objectives">
+    <section id="objectives">
       <h2>Strategic Objectives</h2>
       <div class="grid grid-3">
         <div class="card">
-          <h3>1) Climate Health & Adaptation</h3>
+          <h3>1) Climate Health &amp; Adaptation</h3>
           <p>Link climate hazards to infectious-disease risks and guide locally owned adaptation that protects the most exposed.</p>
         </div>
         <div class="card">
@@ -123,11 +128,11 @@
           <p>Track resistance, map transmission, and evaluate credible alternatives (e.g., phages) to preserve antibiotic effectiveness.</p>
         </div>
         <div class="card">
-          <h3>3) CECs & Clean Environments</h3>
-          <p>Monitor microplastics and chemical residues; co-design practical exposure-reduction and water safety measures.</p>
+          <h3>3) CECs &amp; Clean Environments</h3>
+          <p>Monitor microplastics and chemical residues; co-design practical exposure-reduction and water-safety measures.</p>
         </div>
         <div class="card">
-          <h3>4) Early Warning & Dashboards</h3>
+          <h3>4) Early Warning &amp; Dashboards</h3>
           <p>Develop no/low-tech indicators with communities and pair them with digital dashboards for timely, local action.</p>
         </div>
         <div class="card">
@@ -135,7 +140,7 @@
           <p>Strengthen detection, data pipelines, and response playbooks that scale from neighborhoods to national systems.</p>
         </div>
         <div class="card">
-          <h3>6) Gender Equity & Inclusion</h3>
+          <h3>6) Gender Equity &amp; Inclusion</h3>
           <p>Ensure women, youth, and marginalized groups shape priorities and share equally in benefits and opportunities.</p>
         </div>
         <div class="card">
@@ -143,19 +148,19 @@
           <p>Translate research into policy briefs, protocols, open tools, and investable solutions that deliver real-world impact.</p>
         </div>
         <div class="card">
-          <h3>8) Capacity & Partnerships</h3>
+          <h3>8) Capacity &amp; Partnerships</h3>
           <p>Train local actors and sustain north–south–south collaborations for ethical, long-term stewardship of data and systems.</p>
         </div>
       </div>
     </section>
 
     <!-- Focus Areas -->
-    <section id="focus" aria-labelledby="focus">
+    <section id="focus">
       <h2>Focus Areas</h2>
       <div class="grid grid-3">
         <div class="card">
           <span class="pill">Climate Health</span>
-          <h3>Climate Change & Adaptation</h3>
+          <h3>Climate Change &amp; Adaptation</h3>
           <p>Quantify climate–infection links and co-design adaptation for safer water, food, and living environments.</p>
         </div>
         <div class="card">
@@ -170,7 +175,7 @@
         </div>
         <div class="card">
           <span class="pill">Early Warning</span>
-          <h3>Community Indicators & Dashboards</h3>
+          <h3>Community Indicators &amp; Dashboards</h3>
           <p>No/low-tech signals coupled with digital tools for rapid, locally led decisions.</p>
         </div>
         <div class="card">
@@ -179,39 +184,25 @@
           <p>Field-ready workflows, data standards, and response playbooks from community to policy level.</p>
         </div>
         <div class="card">
-          <span class="pill">Equity & Impact</span>
-          <h3>Gender Equity & Valorization</h3>
+          <span class="pill">Equity &amp; Impact</span>
+          <h3>Gender Equity &amp; Valorization</h3>
           <p>Inclusive design plus clear pathways from science to policy, practice, and products.</p>
         </div>
       </div>
     </section>
 
-    <!-- CEO Message -->
-    <section id="ceo" aria-labelledby="ceo">
-      <h2>From the CEO</h2>
-      <div class="ceo">
-        <img src="images/ceo.jpg" alt="Photo of CHANGE CEO" />
-        <div>
-          <p class="quote">“Climate change is already shaping who gets sick, where, and when. Our job is to listen first, measure wisely, and act with communities—so evidence becomes safer water, fewer infections, and fairer health.”</p>
-          <p><strong>Dr. Yaovi Mahuton Gildas Hounmanou</strong><br/>
-          Founder &amp; CEO, CHANGE</p>
-          <p class="muted">Partnerships & media: <a href="mailto:change.ngo.v1@gmail.com">change.ngo.v1@gmail.com</a></p>
-        </div>
-      </div>
-    </section>
-
     <!-- Projects -->
-    <section id="projects" aria-labelledby="projects">
+    <section id="projects">
       <h2>Projects</h2>
       <p class="muted">These link to separate projects and activities.</p>
       <div class="grid grid-3">
         <div class="card">
-          <h3>Water & Health Early Warning</h3>
+          <h3>Water &amp; Health Early Warning</h3>
           <p>Community indicators for microbial risk plus alert dashboards and training.</p>
           <p><a href="#" aria-disabled="true">Coming soon</a></p>
         </div>
         <div class="card">
-          <h3>AMR Surveillance & Phage Options</h3>
+          <h3>AMR Surveillance &amp; Phage Options</h3>
           <p>Resistance tracking, transmission networks, and credible antibiotic alternatives.</p>
           <p><a href="#" aria-disabled="true">Coming soon</a></p>
         </div>
@@ -224,7 +215,7 @@
     </section>
 
     <!-- Publications -->
-    <section id="publications" aria-labelledby="publications">
+    <section id="publications">
       <h2>Publications</h2>
       <p class="muted">A selection of recent research outputs. <a href="publications/index.html">See all publications →</a></p>
       <ul class="clean">
@@ -234,18 +225,18 @@
       </ul>
     </section>
 
-    <!-- News / Impact -->
-    <section id="news" aria-labelledby="news">
+    <!-- News -->
+    <section id="news">
       <h2>News &amp; Impact</h2>
       <ul class="clean">
-        <li><strong>[Update]</strong> CHANGE launches its public website and project portfolio. <span class="muted">Short 1–2 sentence update here.</span></li>
+        <li><strong>[Update]</strong> CHANGE launches its public website and project portfolio. <span class="muted">Add a short update here.</span></li>
         <li><strong>[Report]</strong> Baseline of CECs and microbial risk in pilot communities. <span class="muted">Link to PDF or repo when available.</span></li>
-        <li><strong>[Training]</strong> Workshop on early-warning systems and field genomics. <span class="muted">Dates & brief outcome.</span></li>
+        <li><strong>[Training]</strong> Workshop on early-warning systems and field genomics. <span class="muted">Dates &amp; brief outcome.</span></li>
       </ul>
     </section>
 
     <!-- Partners -->
-    <section id="partners" aria-labelledby="partners">
+    <section id="partners">
       <h2>Partners</h2>
       <p class="muted">Logo placeholders of partners.</p>
       <div class="partners">
@@ -256,19 +247,18 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" aria-labelledby="contact">
+    <section id="contact">
       <h2>Contact</h2>
-      <p>Partnerships & inquiries: <a href="mailto:change.ngo.v1@gmail.com">change.ngo.v1@gmail.com</a></p>
+      <p>Partnerships &amp; inquiries: <a href="mailto:change.ngo.v1@gmail.com">change.ngo.v1@gmail.com</a></p>
       <p class="muted">We do not publish personal addresses or phone numbers. Use the email above for initial contact.</p>
     </section>
   </main>
 
   <footer>
-    © <span id="yr"></span> CHANGE - Research Center for Global Health Action on Climate Change, Gender Equity, and Emerging Diseases
+    © <span id="yr"></span> CHANGE – Research Center for Global Health Action on Climate Change, Gender Equity, and Emerging Diseases
   </footer>
 
   <script>
-    // set current year in footer
     document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
 </body>
