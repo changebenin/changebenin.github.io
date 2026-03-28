@@ -40,6 +40,23 @@
     @media(min-width:720px){ .grid-3{ grid-template-columns:repeat(3,1fr) } .grid-2{ grid-template-columns:repeat(2,1fr) } }
     .card{ background:#fff; border-radius:14px; padding:1rem; box-shadow:var(--shadow); }
     .card h3{ margin-top:0; color:#0b7467 }
+    .team-grid{ display:grid; gap:1rem; }
+@media(min-width:720px){ .team-grid{ grid-template-columns:repeat(3,1fr); } }
+.team-card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:0.75rem;
+}
+.team-card .role{
+  color:var(--muted);
+  font-weight:600;
+  margin:0.25rem 0;
+}
+.team-card p{
+  margin:0.35rem 0;
+}
     .pill{ display:inline-block; padding:0.25rem 0.6rem; border-radius:999px; background:#eef6f5; color:#0b7467; font-size:0.8rem; font-weight:700 }
     .partners{ display:flex; gap:1rem; flex-wrap:wrap; align-items:center }
     .partners img{ height:36px; filter:grayscale(100%); opacity:0.75 }
@@ -122,62 +139,82 @@
   <h2>Leadership &amp; Team</h2>
   <p class="muted">CHANGE brings together executive, scientific, and departmental leadership to guide research, implementation, and institutional development.</p>
 
-  <div class="grid grid-2">
+  <div class="team-grid">
 
-    <!-- Executive Board -->
-    <div class="card">
-      <h3>Executive Board</h3>
-      <p><strong>President:</strong> Dr. Gildas Hounmanou</p>
-      <p><strong>Vice-President:</strong> Dr Jerrold Agbankpe</p>
-      <p><strong>Executive Director:</strong> Dr Arnaud Soha</p>
-      <p><strong>Secretary General:</strong> Mrs. Murielle Agonsanou</p>
-      <p><strong>Treasurer/Head of Finance:</strong> Dr. Priscilia Capo-Chichi</p>
+    <div class="card team-card">
+      <img src="images/team/gildas.jpg" alt="Dr. Gildas Hounmanou" />
+      <h3>Dr. Gildas Hounmanou</h3>
+      <p class="role">President</p>
+      <p>Head, Department of Antimicrobial Resistance</p>
+      <p>Lead, Department of Pandemic Preparedness &amp; Response</p>
     </div>
 
-    <!-- Supervisory Board -->
-    <div class="card">
-      <h3>Supervisory Board</h3>
-      <p><strong>Chair:</strong> Mrs. Rachel Kobli</p>
-      <p><strong>Secretary:</strong> Mr. Bonard Hamil Vodougnon</p>
-      <p><strong>Member:</strong> Mrs. Frédérica Toni</p>
+    <div class="card team-card">
+      <img src="images/team/jerrold.png" alt="Dr. Jerrold Agbankpe" />
+      <h3>Dr. Jerrold Agbankpe</h3>
+      <p class="role">Vice-President</p>
+      <p>Member, Department of Antimicrobial Resistance</p>
+      <p>Member, Department of Pandemic Preparedness &amp; Response</p>
     </div>
 
-    <!-- Scientific Board -->
-    <div class="card">
-      <h3>Scientific Board</h3>
-      <p><strong>Chair:</strong> Dr. Marc Bossou</p>
-      <p><strong>Members:</strong> Department Heads and President of the Executive Board</p>
+    <div class="card team-card">
+      <img src="images/team/arnaud.png" alt="Dr. Arnaud Soha" />
+      <h3>Dr. Arnaud Soha</h3>
+      <p class="role">Executive Director</p>
+      <p>Head, Department of Early Warning Systems &amp; Data Analytics</p>
     </div>
 
-    <!-- Departments & Members -->
-    <div class="card">
-  <h3>Departments &amp; Members</h3>
+    <div class="card team-card">
+      <img src="images/team/priscilia.png" alt="Dr. Priscilia Capo-Chichi" />
+      <h3>Dr. Priscilia Capo-Chichi</h3>
+      <p class="role">Treasurer / Head of Finance</p>
+      <p>Head, Department of Gender Equity &amp; Science Valorization</p>
+    </div>
 
-  <p><strong>Climate Change &amp; Adaptation:</strong><br/>
-  Lead: Murielle Agonsanou<br/>
-  Members: Corinaud Gbemavo, Gildas Hounmanou, Arnaud Soha, Marc Bossou</p>
+    <div class="card team-card">
+      <img src="images/team/murielle.png" alt="Murielle Agonsanou" />
+      <h3>Murielle Agonsanou</h3>
+      <p class="role">Secretary General</p>
+      <p>Head, Department of Climate Change &amp; Adaptation</p>
+    </div>
 
-  <p><strong>Antimicrobial Resistance:</strong><br/>
-  Lead: Gildas Hounmanou<br/>
-  Members: Jerrold Agbankpe, Arnaud Soha, Murielle Agonsanou</p>
+    <div class="card team-card">
+      <img src="images/team/hamil.jpg" alt="Bonard Hamil Vodougnon" />
+      <h3>Bonard Hamil Vodougnon</h3>
+      <p class="role">Secretary, Supervisory Board</p>
+      <p>Head, Department of Contaminants of Emerging Concern</p>
+    </div>
 
-  <p><strong>Contaminants of Emerging Concern:</strong><br/>
-  Lead: Bonard Hamil Vodougnon<br/>
-  Members: Marc Bossou, Corinaud Gbemavo, Priscilia Capo-Chichi, Jerrold Agbankpe</p>
+    <div class="card team-card">
+      <h3>Corinaud Gbemavo</h3>
+      <p class="role">Research Team Member</p>
+      <p>Member, Department of Contaminants of Emerging Concern</p>
+      <p>Member, Department of Climate Change &amp; Adaptation</p>
+      <p>Member, Department of Gender Equity &amp; Science Valorization</p>
+    </div>
 
-  <p><strong>Early Warning Systems &amp; Data Analytics:</strong><br/>
-  Lead: Arnaud Soha<br/>
-  Members: Frédérica Toni, Rachel Kobli</p>
+    <div class="card team-card">
+      <img src="images/team/marc.png" alt="Dr. Marc Bossou" />
+      <h3>Dr. Marc Bossou</h3>
+      <p class="role">Chair, Scientific Board</p>
+      <p>Member, Department of Climate Change &amp; Adaptation</p>
+      <p>Member, Department of Pandemic Preparedness &amp; Response</p>
+    </div>
 
-  <p><strong>Pandemic Preparedness &amp; Response:</strong><br/>
-  Lead: Dr. Gildas Hounmanou<br/>
-  Members: Arnaud Soha, Marc Bossou, Jerrold Agbankpe</p>
+    <div class="card team-card">
+      <img src="images/team/rachel.png" alt="Rachel Annick Kobli" />
+      <h3>Rachel Annick Kobli</h3>
+      <p class="role">Chair, Supervisory Board</p>
+      <p>Member, Department of Gender Equity &amp; Science Valorization</p>
+      <p>Member, Department of Early Warning Systems &amp; Data Analytics</p>
+    </div>
 
-  <p><strong>Gender Equity &amp; Science Valorization:</strong><br/>
-  Lead: Priscilia Capo-Chichi<br/>
-  Members: Murielle Agonsanou, Rachel Kobli, Priscilia Capo-Chichi, Corinaud Gbemavo</p>
-
-</div>
+    <div class="card team-card">
+      <img src="images/team/frederica.png" alt="Frédérica Toni" />
+      <h3>Frédérica Toni</h3>
+      <p class="role">Member, Supervisory Board</p>
+      <p>Member, Department of Early Warning Systems &amp; Data Analytics</p>
+    </div>
 
   </div>
 </section>
